@@ -1,0 +1,8 @@
+int main()
+{
+ float a,b,c;
+ a=10.4;
+ b=12.1;
+ c=a+b;
+ printf("the value of c=%f" ,c);
+}
