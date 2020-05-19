@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+  background:lightgrey url("img_tree.gif") repeat-y fixed;
+  overflow:scroll;  
+}
+
+div.b{
+  border: 2px solid green;
+  outline: 2px;
+  }
+h1.a {
+  font:small-caps bold 14px/20px Georgia;
+}
+table {
+     border-collapse: collapse;
+}
+
+th {
+    color:red;
+    border: 2px solid black;
+  }
+td {
+    color:blue;
+    border: 3px dashed black;
+  }
+p1 {
+    text-decoration:underline;
+  }
+p2 {
+    text-decoration:line-through;
+}
+p3{
+    text-decoration:overline;
+}
+div.a{
+   text-align:right;
+   }
+p.a {
+  direction: ltr;
+  text-indent:45px;
+}
+ul.a {
+  list-style-type: upper-roman;
+}
+
+ul.b {
+  list-style-type: lower-roman;
+}
+
+ol.c {
+  list-style-type: upper-alpha;
+}
+
+ol.d {
+  list-style-type: lower-alpha;
+}
+img {
+      float:left;
+       }
+div.new{
+          border-style: solid;
+          border-color: yellow black;
+          margin:15px;
+          padding:15px;
+   }
+</style>
+</head>
+<body>
+<!--  A heading with font bold, have a size of 14 pixels, a line height of 20 pixels, and it's font should be Georgia -->
+<div class="b">
+<h1 class="a">readyassist</h1>
+
+<!-- Table with headers having a solid border of 2 px and red in color, cells having a dashed border of 3 px and blue in color -->
+<table>
+  <tr>
+    <th>Firstname</th>
+    <th>Lastname</th>
+    <th>Position</th>
+    <th>Email</th>
+  </tr>
+  <tr>
+    <td>Praveen</td>
+    <td>Chakravarthy</td>
+    <td>Software Developer</td>
+    <td>pc@readyassist.in</td>
+  </tr>
+  <tr>
+    <td>Nagarajan</td>
+    <td>Subramanian</td>
+    <td>Software Developer</td>
+    <td>naga@readyassist.in</td>
+  </tr>
+  <tr>
+    <td>Stepin</td>
+    <td>Jegan</td>
+    <td>Software Developer</td>
+    <td>Stefin@readyassist.in</td>
+  </tr>
+</table>
+<div class="a">
+<!-- paragraph with underline and also align from right to left -->
+<p1>With the rising vehicle population, declining skilled mechanics, being a real cosmopolitan city, today it is a real need to find a reliable, safe, multi-language and <u>transparent</u> service provider in the city to ensure 24/7 breakdown support anytime anywhere in Bangalore. Team ReadyAssist, understand this problem well and they have mastered at every art in Automobile care with a network of more than 650 service partners capable of providing a breakdown support within 30mins at anytime of a day within Bangalore.</p1>
+<br>
+<!-- paragraph with line-through -->
+<p2>Even I was curious while researching them, to know about the fact that they can reach within 30mins. Today the situation in Bangalore has come to an extend that a pizza could not be delivered with in 30mins. But it is their tight network and a robust intuitive technology that enables ReadyAssist to make this a reality. Sometimes it even makes us to think, what is so serious about getting a breakdown support in 30mins! I have a question to answer this.</p2>
+<br>
+<!-- paragarph with overline -->
+<p3 class="a">Imagine a situation where a couple gets stranded at the midnight in the middle of a road due to a vehicle breakdown. At this point, the male can neither leave the partner to take care of the vehicle nor could he take her along in unknown areas in search of a mechanic. Maybe the only better choice is to leave the vehicle there and find a cab or auto-rickshaw to reach home. But now the question is how safe is your vehicle? What if your home is at the other end of the city? Are you going to spend the whole next day to get a mechanic to assist you? Many of us might face similar situations and it is times like these that makes us think that it would’ve been wonderful if we had an assistance readily available to handle the problem. This is why ReadyAssist was born.</P3>
+</div>
+<!-- Paragraphs showing text in reverse.
+Paragraphs with indentation from left by 45px -->
+
+<p class="a">Information is about Readyassist</p>
+
+<!-- Display the list of HTML, CSS, JS, TS using Ordered & Unordered List using numbers, romans(upper & lower) and alphabets (upper & lower) -->
+
+<p4>Unordered lists:</p4>
+<ul class="a">
+  <li>html</li>
+  <li>css</li>
+  <li>js</li>
+  <li>ts</li>
+</ul>
+
+<ul class="b">
+  <li>html</li>
+  <li>css</li>
+  <li>js</li>
+  <li>ts</li>
+</ul>
+
+<p5>Ordered lists:</p5>
+
+<ol class="c">
+  <li>html</li>
+  <li>css</li>
+  <li>js</li>
+  <li>ts</li>
+  
+</ol>
+
+<ol class="d">
+ <li>html</li>
+  <li>css</li>
+  <li>js</li>
+  <li>ts</li>
+</ol>
+
+<!-- A newspaper style div with image on the left and text on the right -->
+<p6><img src="readyassist.jpg" alt="readyassist"> ReadyAssist intends to be the best roadside assistance provider by proactively addressing the real-time vehicle breakdown problems of customers using deep machine learning, data intelligence, and operations efficiency. We use data intelligence to match right mechanics for a problem using their skills, competency, experience, rating, location, discipline and many other factors. The plan is to build a system that will proactively engage with the customers & mechanics by progressive learning & machine learning.</p6>
+
+<!-- div with different border colors for each side, having background as grey, text color white, padding 15px, margin 15px -->
+<div class="new">I'M WORKING AS A SOFTWARE DEVELOPER</div>
+
+</div>
+</body>
+</html>
