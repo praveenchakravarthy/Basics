@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>api exercise</title>
+        <style>
+            body{
+                background-color: black;
+            }
+            div.header {
+                 padding: 20px;
+                 text-align: center;
+                 background: yellow;
+                 color: black;
+                 font-size: 20px;
+                       }
+            .al{
+                margin-top: 50px;
+                margin-left:150px;
+                width :20%;
+                height:100%;
+                background-color:yellow;
+                float:left;
+
+            }
+           
+            img{
+                border-radius:20px;
+                margin-left: 30%;
+                margin-right: auto;
+
+            }
+            .cc{
+                text-align: center;
+
+            }
+            div:hover{
+                background-color: lightblue;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class="header"><h1>ReadyAssist</h1></div>
+        <div id="app"></div>
+
+    </body>
+    <script>
+
+        function fetchData() {
+               fetch("https://reqres.in/api/users/")
+            .then(response => {
+                if(!response.ok) {
+                    throw Error("ERROR");
+                }
+                return response.json();
+            })
+            .then(pc => {
+                const html = pc.data
+                .map(user => {
+                    return `
+                    <div class="al">
+                    <p><img src="${user.avatar}" alt="${user.image}"/></p>
+                   
+                    <div>
+                    <p class="cc">Id: ${user.id}</p>
+                    <p class="cc">Name: ${user.first_name} ${user.last_name}</p>
+                    <p class="cc">Email: ${user.email}</p>
+                </div>
+                    </div> `;
+                })
+                .join("");
+                document
+                         .querySelector("#app").insertAdjacentHTML("afterbegin", html);
+            })
+            .catch(error => {
+                console.log("you are not allowed",error);
+            });
+        }
+        fetchData();
+
+       
+    </script>
+</html>
