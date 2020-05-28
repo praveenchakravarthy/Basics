@@ -36,18 +36,18 @@
 
   </style>
   <body> 
-    <div> 
+   
       <h1>Fetch API GET REQUEST</h1> 
       <!-- Table to display fetched user data -->
 	  <table id="fetch"></table> 
 	  <br>
 	  <h1>AXIOS API GET REQUEST</h1>
 	  <br>
-	  <table id="axios"></table>
-    </div> 
+	  <table id="axios">
+	  </table>
        
     
-    <script > 
+	<script>
 
 
 function fetchdata() {
@@ -67,7 +67,7 @@ fetch("https://jsonplaceholder.typicode.com/users")
 					 </tr>`; 
 		
 		// Loop through each data and add a table row 
-		pc.forEach(user => { 
+	    pc.forEach(user => { 
 			li += `<tr> 
 				<td>${user.id} </td> 
 				<td>${user.name}</td>
@@ -93,7 +93,7 @@ function axiosData() {
 	      .then(function (response) {
             console.log(response.data);
         })
-		.then(json => {
+		.then(data=> {
 			let li = `<tr>
 		             <th>id</th>
 		             <th>Name</th>
@@ -103,7 +103,7 @@ function axiosData() {
 					 </tr>`; 
 		
 		// Loop through each data and add a table row 
-		json.forEach(user => { 
+		data.forEach(user => { 
 			li += `<tr> 
 				<td>${user.id} </td> 
 				<td>${user.name}</td>
@@ -119,9 +119,13 @@ function axiosData() {
         .catch(function (error) {
             console.log(error);
         });
-     }
-	 fetchdata();
-	 axiosData();
+	 }
+	 setTimeout(() => {
+		 fetchdata();
+		 axiosData();
+	 }, 2000);
+	 
+	 
     </script>
   </body> 
 </html> 
